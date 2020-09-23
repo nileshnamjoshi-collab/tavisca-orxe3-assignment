@@ -1,6 +1,6 @@
 import { OrxeButton } from '../';
 
-import { axe, toHaveNoViolations } from '@orxe-devkit/axe';
+import { toHaveNoViolations } from '@orxe-devkit/axe';
 expect.extend(toHaveNoViolations);
 
 describe('orxe-button-axe', () => {
