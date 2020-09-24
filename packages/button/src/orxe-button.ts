@@ -1,4 +1,4 @@
-import { html, customElement, LitElement } from 'lit-element';
+import { html, customElement, LitElement, property } from 'lit-element';
 import styles from './button-css';
 
 @customElement('orxe-button')
@@ -6,15 +6,30 @@ export default class OrxeButton extends LitElement {
   /**
    * Implement `render` to define a template for button element.
    */
+  @property({ attribute: false })
+  primayBtndata = {
+    label: 'Large',
+    displayName: 'Large Button',
+    class: 'primary-btn-large',
+    arialabel: 'Primay large button',
+  };
+
+  @property({ type: String, reflect: true, attribute: 'a11y-button-label' })
+  a11yButtonLabel = this.primayBtndata.arialabel;
+
   render() {
     return html`
       <div class="cards">
         <div class="card">
           <h1>Primary Button components</h1>
-          <h2>Large</h2>
+          <h2>${this.primayBtndata.label}</h2>
           <p>
-            <button class="primary-btn-large" @click="${this.clicked}">
-              Large Button
+            <button
+              a11y-label=${this.a11yButtonLabel}
+              class="${this.primayBtndata.class}"
+              @click="${this.clicked}"
+            >
+              ${this.primayBtndata.displayName}
             </button>
           </p>
           <h2>Medium</h2>
