@@ -1,0 +1,17 @@
+:host {
+    --btn-font-weight-semibold: 600;
+    --btn-primary-background-color: var(--primary);
+    --btn-primary-font-color: var(--neutral);
+    --btn-secondary-background-color: var(--secondary);
+    --btn-secondary-font-color: var(--neutral);
+
+}
+
+$btn-height-size-large: 48px;
+$btn-height-size-medium: 40px;
+$btn-height-size-small: 24px;
+$btn-max-width-extra-small: 100%;
+
+$btn-width-link: auto;
+$btn-font-size-link-large: 1.4rem;
+$btn-font-size-link-small: 1.2rem;
